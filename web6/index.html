@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast - Dự Báo Thời Tiết</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-cloud-sun"></i>
+                <h1>VUHO Weather</h1>
+            </div>
+            <div class="search-container">
+                <input type="text" id="cityInput" placeholder="Nhập tên thành phố...">
+                <button id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Current Weather -->
+            <section class="current-weather" id="currentWeather">
+                    <div class="city-info">
+                        <h2 id="cityName">Hà Nội</h2>
+                        <p id="currentDate">Thứ 2, 25 Tháng 12</p>
+                    </div>
+                    <div class="weather-main">
+                        <div class="temperature">
+                            <span id="currentTemp">25</span>°C
+                        </div>
+                        <div class="weather-description">
+                            <i id="weatherIcon" class="fas fa-sun"></i>
+                            <span id="weatherDesc">Nắng đẹp</span>
+                        </div>
+                    </div>
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <i class="fas fa-thermometer-half"></i>
+                            <span>Cảm giác như: <strong id="feelsLike">27°C</strong></span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-tint"></i>
+                            <span>Độ ẩm: <strong id="humidity">65%</strong></span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-wind"></i>
+                            <span>Gió: <strong id="windSpeed">12 km/h</strong></span>
+                        </div>
+                    </div>
+            </section>
+
+            <!-- City Background Image -->
+            <section class="city-background" id="cityBackground">
+                <div class="background-overlay">
+                    <div class="city-title">
+                        <h2 id="backgroundCityName">Hà Nội</h2>
+                        <p id="backgroundWeatherDesc">Nắng đẹp</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Forecast -->
+            <section class="forecast" id="forecast">
+                <h3>Dự báo 5 ngày tới</h3>
+                <div class="forecast-container" id="forecastContainer">
+                    <!-- Forecast items will be added here -->
+                </div>
+            </section>
+
+             <!-- Vietnam Cities Weather -->
+             <section class="vietnam-cities" id="vietnamCities">
+                <h3>Thời tiết 3 thành phố chính</h3>
+                <div class="cities-grid" id="citiesGrid">
+                    <!-- City weather cards will be added here -->
+                </div>
+            </section>
+
+            
+            <!-- Additional Info -->
+            <section class="additional-info">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-sunrise"></i>
+                        <h4>Bình minh</h4>
+                        <p id="sunrise">06:00</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-sunset"></i>
+                        <h4>Hoàng hôn</h4>
+                        <p id="sunset">18:00</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-eye"></i>
+                        <h4>Tầm nhìn</h4>
+                        <p id="visibility">10 km</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-compress-arrows-alt"></i>
+                        <h4>Áp suất</h4>
+                        <p id="pressure">1013 hPa</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Loading Spinner -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Đang tải dữ liệu thời tiết...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div class="error-message" id="errorMessage">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p id="errorText">Không thể tải dữ liệu thời tiết</p>
+        </div>
+
+        <!-- API Status Check -->
+        <div class="api-status" id="apiStatus">
+            <p>API Status: <span id="apiStatusText">Checking...</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

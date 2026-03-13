@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Movie website | Animated Landing Page</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">VMovie</a>
+        <ul class="nav">
+            <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+            <li><a href="#">Adults</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Trend</a></li>
+            <li><a href="#">My List</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="Search...">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+    </header>
+    <div class="banner">
+        <div class="content active the-little-mermaid">
+            <img src="./images/the-little-mermaid-title.png" alt="" class="movie-title">
+            <h4>
+                <span>2023</span><span><i>12+</i></span><span>2h 14 min</span><span>Romance</span>
+            </h4>
+            <p>"The Little Mermaid" (Nàng Tiên Cá) kể về Ariel, nàng công chúa người cá xinh đẹp, tò mò về thế giới loài người. Sau khi cứu hoàng tử Eric khỏi đắm tàu, Ariel đem lòng yêu chàng và sẵn sàng đánh đổi giọng hát tuyệt vời của mình để có đôi chân, bước vào hành trình khám phá tình yêu, tự do và bản thân giữa hai thế giới đại dương và đất liền.</p>
+            <div class="button">
+                <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Watch</a>
+                <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>My List</a>
+            </div>
+        </div>
+        <div class="content bg-65">
+            <img src="./images/the-65-title.png" alt="" class="movie-title">
+            <h4>
+                <span>2023</span><span><i>16+</i></span><span>2h 33 min</span><span>Action</span>
+            </h4>
+            <p>65 triệu năm trước, một phi hành gia rơi xuống Trái Đất thời khủng long và phải chiến đấu để sinh tồn.</p>
+            <div class="button">
+                <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Watch</a>
+                <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>My List</a>
+            </div>
+        </div>
+        <div class="content the-covenant">
+            <img src="./images/the-covenant-title.png" alt="" class="movie-title">
+            <h4>
+                <span>2023</span><span><i>18+</i></span><span>2h 23 min</span><span>War</span>
+            </h4>
+            <p>Một người lính Mỹ và phiên dịch viên Afghanistan cùng nhau chiến đấu để sống sót.</p>
+            <div class="button">
+                <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Watch</a>
+                <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>My List</a>
+            </div>
+        </div>
+        <div class="content the-black-demon">
+            <img src="./images/the-black-demon-title.png" alt="" class="movie-title">
+            <h4>
+                <span>2023</span><span><i>16+</i></span><span>2h 40 min</span><span>Thriller</span>
+            </h4>
+            <p>Một gia đình bị mắc kẹt trên giàn khoan dầu và bị săn đuổi bởi cá mập khổng lồ.</p>
+            <div class="button">
+                <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Watch</a>
+                <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>My List</a>
+            </div>
+        </div>
+        <div class="content the-tank">
+            <img src="./images/the-tank-title.png" alt="" class="movie-title">
+            <h4>
+                <span>2023</span><span><i>15+</i></span><span>2h 20 min</span><span>Horror</span>
+            </h4>
+            <p>Một gia đình phát hiện bí mật kinh hoàng khi thừa kế một căn nhà ven hồ.</p>
+            <div class="button">
+                <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Watch</a>
+                <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>My List</a>
+            </div>
+        </div>
+
+        <div class="carousel-box">
+            <div class="carousel">
+                <div 
+                    class="carousel-item"
+                    onclick="changeBg('bg-little-mermaid.jpg', 'the-little-mermaid');"
+                >
+                    <img src="./images/movies/the-little-mermaid.jpeg" alt="">
+                </div>
+                <div class="carousel-item" onclick="changeBg('bg-65.jpeg', 'bg-65');">
+                    <img src="./images/movies/65.jpg" alt="">
+                </div>
+                    <div class="carousel-item"
+                    onclick="changeBg('bg-the-covenant.jpeg', 'the-covenant');"
+                >
+                    <img src="./images/movies/the-covenant.jpg" alt="">
+                </div>
+                <div class="carousel-item"
+                onclick="changeBg('bg-the-black-demon.jpeg', 'the-black-demon');"
+                >
+                    <img src="./images/movies/the-black-demon.jpg" alt="">
+                </div>
+                <div class="carousel-item"
+                onclick="changeBg('bg-the-tank.jpeg', 'the-tank');"
+                >
+                    <img src="./images/movies/the-tank.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+            <a href="#" class="play" onclick="toggleVideo();"><i class="fa fa-play-circle-o" aria-hidden="true"></i>Watch Trailer</a>
+            <ul class="sci">
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+    <div class="trailer">
+        <video src="./asset/trailer.mp4" 
+        muted
+        controls="true"
+        autoplay="true"
+        ></video>
+        <img class="close" src="./images/close.png" alt=""
+        onclick="toggleVideo();">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+         $(document).ready(function(){
+          $('.carousel').carousel();
+      });
+      
+    </script>
+</body>
+</html>
